@@ -1,4 +1,4 @@
-package lk.ijse.gdse.aad67.notecollecter67.config;
+package lk.ijse.config;
 
 import jakarta.persistence.EntityManagerFactory;
 import org.modelmapper.ModelMapper;
@@ -7,8 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
@@ -18,8 +16,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = "lk.ijse.gdse.aad67.notecollecter67")
-@EnableJpaRepositories(basePackages = "lk.ijse.gdse.aad67.notecollecter67.dao")
+@ComponentScan(basePackages = "lk.ijse")
+@EnableJpaRepositories(basePackages = "lk.ijse.dao")
 @EnableTransactionManagement
 public class WebAppRootConfig {
     @Bean
@@ -30,9 +28,9 @@ public class WebAppRootConfig {
     public DataSource dataSource() {
         var dmds = new DriverManagerDataSource();
         dmds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dmds.setUrl("jdbc:mysql://localhost:3306/noteTaker2024AAD67?createDatabaseIfNotExist=true");
+        dmds.setUrl("jdbc:mysql://localhost:3306/lafiesta?createDatabaseIfNotExist=true&useSSL=false");
         dmds.setUsername("root");
-        dmds.setPassword("mysql");
+        dmds.setPassword("1234");
         return dmds;
     }
     @Bean
@@ -41,7 +39,7 @@ public class WebAppRootConfig {
         vendorAdapter.setGenerateDdl(true);
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setJpaVendorAdapter(vendorAdapter);
-        factory.setPackagesToScan("lk.ijse.gdse.aad67.notecollecter67.entity.impl");
+        factory.setPackagesToScan("lk.ijse.entity.impl");
         factory.setDataSource(dataSource());
         return factory;
     }
