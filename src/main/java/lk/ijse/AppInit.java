@@ -1,9 +1,9 @@
-package lk.ijse.gdse.aad67.notecollecter67;
+package lk.ijse;
 
 import jakarta.servlet.MultipartConfigElement;
 import jakarta.servlet.ServletRegistration;
-import lk.ijse.gdse.aad67.notecollecter67.config.WebAppConfig;
-import lk.ijse.gdse.aad67.notecollecter67.config.WebAppRootConfig;
+import lk.ijse.config.WebAppConfig;
+import lk.ijse.config.WebAppRootConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
