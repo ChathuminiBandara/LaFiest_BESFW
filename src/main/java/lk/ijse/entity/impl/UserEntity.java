@@ -1,8 +1,7 @@
-package lk.ijse.gdse.aad67.notecollecter67.entity.impl;
+package lk.ijse.entity.impl;
 
 import jakarta.persistence.*;
-import lk.ijse.gdse.aad67.notecollecter67.dto.impl.NoteDTO;
-import lk.ijse.gdse.aad67.notecollecter67.entity.SuperEntity;
+import lk.ijse.entity.SuperEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,5 +23,5 @@ public class UserEntity implements SuperEntity {
     @Column(columnDefinition = "LONGTEXT")
     private String profilePic;
     @OneToMany(mappedBy = "user")
-    private List<NoteEntity> notes;
+    private List<ItemEntity> notes;
 }

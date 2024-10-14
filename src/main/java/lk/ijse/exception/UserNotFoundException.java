@@ -1,4 +1,4 @@
-package lk.ijse.gdse.aad67.notecollecter67.exception;
+package lk.ijse.exception;
 
 public class UserNotFoundException extends RuntimeException {
     public UserNotFoundException() {

@@ -1,13 +1,13 @@
-package lk.ijse.gdse.aad67.notecollecter67.controller;
+package lk.ijse.controller;
 
-import lk.ijse.gdse.aad67.notecollecter67.customStatusCodes.SelectedUserAndNoteErrorStatus;
-import lk.ijse.gdse.aad67.notecollecter67.dto.UserStatus;
-import lk.ijse.gdse.aad67.notecollecter67.dto.impl.UserDTO;
-import lk.ijse.gdse.aad67.notecollecter67.exception.DataPersistException;
-import lk.ijse.gdse.aad67.notecollecter67.exception.UserNotFoundException;
-import lk.ijse.gdse.aad67.notecollecter67.service.UserService;
-import lk.ijse.gdse.aad67.notecollecter67.util.AppUtil;
-import lk.ijse.gdse.aad67.notecollecter67.util.RegexProcess;
+import lk.ijse.customStatusCodes.SelectedUserAndNoteErrorStatus;
+import lk.ijse.dto.UserStatus;
+import lk.ijse.dto.impl.UserDTO;
+import lk.ijse.exception.DataPersistException;
+import lk.ijse.exception.UserNotFoundException;
+import lk.ijse.service.UserService;
+import lk.ijse.util.AppUtil;
+import lk.ijse.util.RegexProcess;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
-import java.util.regex.Pattern;
 
 @RestController
 @RequestMapping("api/v1/users")

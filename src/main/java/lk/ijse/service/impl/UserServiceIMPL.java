@@ -1,15 +1,15 @@
-package lk.ijse.gdse.aad67.notecollecter67.service.impl;
+package lk.ijse.service.impl;
 
 import jakarta.transaction.Transactional;
-import lk.ijse.gdse.aad67.notecollecter67.customStatusCodes.SelectedUserAndNoteErrorStatus;
-import lk.ijse.gdse.aad67.notecollecter67.dao.UserDao;
-import lk.ijse.gdse.aad67.notecollecter67.dto.UserStatus;
-import lk.ijse.gdse.aad67.notecollecter67.dto.impl.UserDTO;
-import lk.ijse.gdse.aad67.notecollecter67.entity.impl.UserEntity;
-import lk.ijse.gdse.aad67.notecollecter67.exception.DataPersistException;
-import lk.ijse.gdse.aad67.notecollecter67.exception.UserNotFoundException;
-import lk.ijse.gdse.aad67.notecollecter67.service.UserService;
-import lk.ijse.gdse.aad67.notecollecter67.util.Mapping;
+import lk.ijse.customStatusCodes.SelectedUserAndNoteErrorStatus;
+import lk.ijse.dao.UserDao;
+import lk.ijse.dto.UserStatus;
+import lk.ijse.dto.impl.UserDTO;
+import lk.ijse.entity.impl.UserEntity;
+import lk.ijse.exception.DataPersistException;
+import lk.ijse.exception.UserNotFoundException;
+import lk.ijse.service.UserService;
+import lk.ijse.util.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

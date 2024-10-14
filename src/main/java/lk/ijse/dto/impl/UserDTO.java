@@ -1,7 +1,6 @@
-package lk.ijse.gdse.aad67.notecollecter67.dto.impl;
+package lk.ijse.dto.impl;
 
-import lk.ijse.gdse.aad67.notecollecter67.dto.SuperDTO;
-import lk.ijse.gdse.aad67.notecollecter67.dto.UserStatus;
+import lk.ijse.dto.UserStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,5 +16,5 @@ public class UserDTO implements UserStatus {
     private String email;
     private String password;
     private String profilePic;
-    private List<NoteDTO> notes;
+    private List<ItemDTO> notes;
 }

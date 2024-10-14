@@ -1,8 +1,8 @@
 package lk.ijse.util;
 
-import lk.ijse.dto.impl.NoteDTO;
+import lk.ijse.dto.impl.ItemDTO;
 import lk.ijse.dto.impl.UserDTO;
-import lk.ijse.entity.impl.NoteEntity;
+import lk.ijse.entity.impl.ItemEntity;
 import lk.ijse.entity.impl.UserEntity;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -25,14 +25,14 @@ public class Mapping {
     public List<UserDTO> asUserDTOList(List<UserEntity> userEntities) {
         return modelMapper.map(userEntities, new TypeToken<List<UserDTO>>() {}.getType());
     }
-    //for note mapping
-    public NoteDTO toNoteDTO(NoteEntity noteEntity) {
-        return modelMapper.map(noteEntity, NoteDTO.class);
+    //for item mapping
+    public ItemDTO toItemDTO(ItemEntity itemEntity) {
+        return modelMapper.map(itemEntity, ItemDTO.class);
     }
-    public NoteEntity toNoteEntity(NoteDTO noteDTO) {
-        return modelMapper.map(noteDTO, NoteEntity.class);
+    public ItemEntity toItemEntity(ItemDTO itemDTO) {
+        return modelMapper.map(itemDTO, ItemEntity.class);
     }
-    public List<NoteDTO> asNoteDTOList(List<NoteEntity> noteEntities) {
-        return modelMapper.map(noteEntities, new TypeToken<List<NoteDTO>>() {}.getType());
+    public List<ItemDTO> asItemDTOList(List<ItemEntity> itemEntities) {
+        return modelMapper.map(itemEntities, new TypeToken<List<ItemDTO>>() {}.getType());
     }
 }

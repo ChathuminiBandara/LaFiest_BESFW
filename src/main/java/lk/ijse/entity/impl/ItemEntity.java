@@ -1,7 +1,7 @@
-package lk.ijse.gdse.aad67.notecollecter67.entity.impl;
+package lk.ijse.entity.impl;
 
 import jakarta.persistence.*;
-import lk.ijse.gdse.aad67.notecollecter67.entity.SuperEntity;
+import lk.ijse.entity.SuperEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "note")
-public class NoteEntity implements SuperEntity {
+@Table(name = "item")
+public class ItemEntity implements SuperEntity {
     @Id
-    private String noteId;
-    private String noteTitle;
-    private String noteDesc;
+    private String itemId;
+    private String itemTitle;
+    private String itemDesc;
     private String createdDate;
     private String priorityLevel;
     @ManyToOne

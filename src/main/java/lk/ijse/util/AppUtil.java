@@ -4,8 +4,8 @@ import java.util.Base64;
 import java.util.UUID;
 
 public class AppUtil {
-    public static String generateNoteId(){
-        return "NOTE-"+UUID.randomUUID();
+    public static String generateItemId(){
+        return "ITEM-"+UUID.randomUUID();
     }
     public static String generateUserId(){
         return "USER-"+UUID.randomUUID();
