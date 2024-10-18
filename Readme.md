@@ -4,7 +4,7 @@
 # API Documentation
 
 ## Base URL
-`http://<your-server-url>/api/v1/`
+`http://lafiesta/api/v1/`
 
 ---
 
